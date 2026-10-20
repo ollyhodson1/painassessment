@@ -22,7 +22,7 @@
     ],
     [
       "intro_body",
-      "You are the nurse caring for a patient on a mental health inpatient ward. Gather a focused pain history, make safe clinical decisions, hand over your concerns using SBAR, and reflect on your practice. You will not receive the full clinical picture unless you ask appropriate questions.",
+      "You are caring for a patient on a mental health inpatient ward. Use ThingLink to take a pain history, choose an appropriate intensity rating tool, document PQRST findings, plan safe clinical decisions, hand over using SBAR and complete your Gibbs reflection.",
       "Introductory brief; editable"
     ],
     [
@@ -72,13 +72,8 @@
     ],
     [
       "chat_help",
-      "Ask one focused question at a time. The patient will reveal only information you actively enquire about. You may request a set of observations from the ward team.",
+      "Speak with Alex using the embedded ThingLink AI patient. Type notes in the panel on the right.",
       "Instructions over patient chat"
-    ],
-    [
-      "chat_min_turns",
-      "5",
-      "Minimum patient questions before progressing; set to 0 to disable"
     ],
     [
       "code",
@@ -104,6 +99,21 @@
       "footer_note",
       "Educational simulation only. Fictional patient. Follow local policy, escalation procedures and prescribing guidance in actual clinical practice.",
       "Footer wording"
+    ],
+    [
+      "thinglink_embed_url",
+      "https://www.thinglink.com/view/scenario/2169112638494081892",
+      "ThingLink scenario iframe link"
+    ],
+    [
+      "assessment_intro",
+      "Choose a structured way to take the pain history, and an intensity rating method appropriate for a patient who can tell you about their pain. Some specialist tools below are unsuitable for Alex.",
+      "Introductory guidance for assessment selection"
+    ],
+    [
+      "embedded_consultation_message",
+      "Speak with Alex in the ThingLink window. Keep notes alongside it; the consultation does not automatically transfer into your documentation.",
+      "Patient conversation guidance"
     ]
   ],
   "tools": [
@@ -130,6 +140,12 @@
       "OPQRST",
       "Onset, Provocation / Palliation, Quality, Region / Radiation, Severity, Time",
       "When did this begin?|What changes the pain?|Describe the pain|Where is it and does it radiate?|Rate it 0–10|Is it constant or intermittent?"
+    ],
+    [
+      "oldcarts",
+      "OLD CARTS",
+      "Onset, Location, Duration, Character, Aggravating factors, Relieving factors, Timing, Severity",
+      "When did it begin?|Where is the pain?|How long has it lasted?|What is it like?|What worsens it?|What relieves it?|Has it changed?|How severe is it?"
     ]
   ],
   "dialogue": [
@@ -444,7 +460,7 @@
     ],
     [
       "Analysis",
-      "Why did you choose that pain assessment framework? How did it help or limit your clinical reasoning?",
+      "Why did you choose your pain-history framework and intensity scale? Were they appropriate for Alex?",
       "Explicitly name your chosen tool and discuss its usefulness."
     ],
     [
@@ -456,6 +472,96 @@
       "Action Plan",
       "What specific action will you take to improve your next pain assessment?",
       "Make the future action achievable and observable."
+    ]
+  ],
+  "scales": [
+    [
+      "id",
+      "name",
+      "type",
+      "description",
+      "suitability",
+      "student_guidance"
+    ],
+    [
+      "nrs",
+      "Numerical Rating Scale (NRS)",
+      "intensity",
+      "A patient rates their pain from 0 (no pain) to 10 (worst imaginable pain).",
+      "Appropriate",
+      "Ask Alex to rate the current pain from 0 to 10."
+    ],
+    [
+      "vrs",
+      "Verbal Rating Scale (VRS/VDS)",
+      "intensity",
+      "Patient describes the pain as no pain, mild, moderate, severe or similar descriptors.",
+      "Appropriate",
+      "Ask Alex to choose a word that best describes the intensity."
+    ],
+    [
+      "vas",
+      "Visual Analogue Scale (VAS)",
+      "intensity",
+      "The patient marks their pain intensity on a continuous line, often 100 mm.",
+      "Requires a visual tool",
+      "A true VAS requires a line the patient can mark. Asking for a 0–10 number is not a VAS. Acknowledge the limits of remote delivery."
+    ],
+    [
+      "faces",
+      "Wong–Baker FACES Pain Rating Scale",
+      "intensity",
+      "A pictorial self-report scale using a series of faces.",
+      "May be appropriate with a validated chart",
+      "Use the actual licensed/approved chart if available. Do not judge Alex’s pain from facial expression alone."
+    ],
+    [
+      "mcgill",
+      "McGill Pain Questionnaire (MPQ)",
+      "adjunct",
+      "A more detailed multidimensional questionnaire about sensory and emotional aspects of pain.",
+      "Possible adjunct; not a substitute for acute assessment",
+      "May be too lengthy for urgent deterioration. It supplements, rather than replaces, immediate safety assessment."
+    ],
+    [
+      "diagram",
+      "Body pain diagram",
+      "adjunct",
+      "Patient indicates pain distribution on a body outline.",
+      "Possible adjunct",
+      "Useful for documenting site and radiation; does not replace a pain history or acuity assessment."
+    ],
+    [
+      "flacc",
+      "FLACC",
+      "specialist",
+      "Behaviour-based assessment: Face, Legs, Activity, Cry, Consolability.",
+      "Not indicated for Alex",
+      "Typically used in children or people unable to self-report, rather than an alert adult who can communicate."
+    ],
+    [
+      "cries",
+      "CRIES",
+      "specialist",
+      "Neonatal pain assessment: Crying, Requires oxygen, Increased vital signs, Expression, Sleeplessness.",
+      "Not indicated for Alex",
+      "Intended for newborns, not a verbal 46-year-old adult."
+    ],
+    [
+      "comfort",
+      "COMFORT Scale",
+      "specialist",
+      "Behavioural/physiological assessment used in critical care settings.",
+      "Not indicated for Alex",
+      "For intensive care populations; not the first choice for an adult who can self-report."
+    ],
+    [
+      "abbey",
+      "Abbey Pain Scale",
+      "specialist",
+      "Observational tool for people with advanced dementia who cannot reliably communicate their pain.",
+      "Not indicated for Alex",
+      "Designed for patients who cannot reliably self-report; Alex can answer questions."
     ]
   ]
 }

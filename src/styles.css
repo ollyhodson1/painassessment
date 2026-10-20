@@ -17,3 +17,17 @@
 .specialist-row p{margin:3px 0 4px;font-size:14px}.specialist-row small{color:#566d69}
 @media(max-width:1050px){.thinglink-layout{grid-template-columns:1fr}.notes{position:static}.thinglink-frame{height:75vh;min-height:600px}}
 @media(max-width:600px){.thinglink-frame{height:620px;min-height:540px}.thinglink-help{line-height:1.5}}
+
+/* Keep the same consultation notes beside the assessment form. */
+.documentation-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(230px,1fr);gap:18px;align-items:start;margin-top:26px}
+.documentation-fields{min-width:0}
+.documentation-fields .form-grid{margin-top:0}
+.notes-head label{font-weight:700;font-size:14px}
+.content-source{display:flex;flex-direction:column;align-items:flex-start;gap:9px;max-width:460px}
+.content-source details{line-height:1.6}
+.content-source summary{cursor:pointer;text-decoration:underline}
+.content-source p{margin:8px 0}
+.content-source ul{padding-left:18px}
+.content-source a{color:#087d79}
+.content-source button.ghost{font-size:11px;padding:8px 11px}
+@media(max-width:1050px){.documentation-layout{grid-template-columns:1fr}.documentation-layout>.notes{grid-row:1}.documentation-layout .notes textarea{min-height:160px}}

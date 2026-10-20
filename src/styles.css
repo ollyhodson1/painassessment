@@ -31,3 +31,8 @@
 .content-source a{color:#087d79}
 .content-source button.ghost{font-size:11px;padding:8px 11px}
 @media(max-width:1050px){.documentation-layout{grid-template-columns:1fr}.documentation-layout>.notes{grid-row:1}.documentation-layout .notes textarea{min-height:160px}}
+
+/* Keep assessment labels and values in natural reading order. */
+.assessment-summary{display:block}
+.assessment-summary p{margin:0 0 8px}
+.assessment-summary p:last-child{margin:12px 0 0}

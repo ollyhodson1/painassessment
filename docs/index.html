@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07565a">
+  <title>SPL9 | Pain Assessment Simulation</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    /* Visible before JavaScript runs; also explains what to do if libraries cannot load. */
+    #loading-screen{min-height:100vh;display:grid;place-items:center;background:#f6faf9;color:#163a3c;font-family:Arial,sans-serif;padding:24px;box-sizing:border-box}
+    #loading-screen>section{background:white;border:1px solid #dbe8e5;border-radius:16px;padding:34px;max-width:520px;width:100%;box-shadow:0 14px 30px #003d3b0c}
+    #loading-screen h1{font-size:24px;line-height:1.3;margin:0 0 12px}#loading-screen p{font-size:16px;line-height:1.6}
+    #loading-screen small{color:#526869}#loading-screen a{color:#007d74}
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@19.1.0",
+      "react-dom/client": "https://esm.sh/react-dom@19.1.0/client?external=react",
+      "lucide-react": "https://esm.sh/lucide-react@0.468.0?external=react"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="root">
+    <div id="loading-screen"><section>
+      <h1>SPL9 · Virtual Patient: Pain Assessment</h1>
+      <p id="load-message">Loading your simulation…</p>
+      <small>If the simulation does not open, check that your internet connection allows external JavaScript libraries. Contact your facilitator if the problem continues.</small>
+    </section></div>
+  </div>
+  <noscript><p>This simulation requires JavaScript to be enabled.</p></noscript>
+  <script>
+    // Keep a useful message on screen if the module or its external React libraries fail.
+    window.addEventListener('error',function(event){
+      var m=document.getElementById('load-message');
+      if(m){m.textContent='The simulation could not load its code. Please check your connection and refresh the page. If it keeps happening, ask your facilitator for help.';}
+    });
+    window.addEventListener('unhandledrejection',function(event){
+      var m=document.getElementById('load-message');
+      if(m){m.textContent='The simulation could not finish loading. Refresh the page, or contact your facilitator.';}
+    });
+    setTimeout(function(){var m=document.getElementById('load-message');if(m){m.textContent='Still loading? This version needs access to esm.sh for React libraries. If this is blocked on your network, ask your facilitator for the offline-build version.';}},12000);
+  </script>
+  <!-- JSX is already compiled to ordinary JavaScript, so no in-browser Babel is needed. -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

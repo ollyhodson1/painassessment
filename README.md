@@ -20,9 +20,13 @@ The `dialogue` tab is retained for compatibility with the older scripted patient
 
 To change the patient portrait, enter a direct HTTPS image URL into `patient_portrait_url` in `settings`, or replace `public/patient.svg` and let the workflow rebuild. A photo inserted *inside a Google Sheets cell* will not automatically become a website asset.
 
+## Assessment documentation
+
+The documentation page title, sidebar label, form fields and completion check follow the selected history framework. In the `tools` tab, `description` supplies comma-separated field headings and `prompts` supplies matching questions separated by `|`, in the same order. This supports PQRST, SOCRATES, OPQRST and OLD CARTS, as well as additional configured frameworks. Answers are kept separately for each tool during the current attempt, so changing frameworks never relabels an existing answer. Switching back restores that framework’s draft. Every visible field must contain at least 12 non-whitespace characters before continuing.
+
 ## Consultation notes
 
-The same editable notes panel appears on the ThingLink consultation and PQRST documentation pages. On wide screens it sits beside the assessment form; on smaller screens it appears above the fields. Edits are shared when moving backwards and forwards. Notes and answers are held in memory for the current attempt and are cleared by a page reload; they are not sent to Google Sheets or ThingLink.
+The same editable notes panel appears on the ThingLink consultation and selected-framework documentation pages. On wide screens it sits beside the assessment form; on smaller screens it appears above the fields. Edits are shared when moving backwards and forwards. Notes and answers are held in memory for the current attempt and are cleared by a page reload; they are not sent to Google Sheets or ThingLink.
 
 ## Educational safety
 

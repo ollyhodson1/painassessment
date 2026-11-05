@@ -22,7 +22,13 @@ To change the patient portrait, enter a direct HTTPS image URL into `patient_por
 
 ## Assessment documentation
 
-The documentation page title, sidebar label, form fields and completion check follow the selected history framework. In the `tools` tab, `description` supplies comma-separated field headings and `prompts` supplies matching questions separated by `|`, in the same order. This supports PQRST, SOCRATES, OPQRST and OLD CARTS, as well as additional configured frameworks. Answers are kept separately for each tool during the current attempt, so changing frameworks never relabels an existing answer. Switching back restores that framework’s draft. Every visible field must contain at least 12 non-whitespace characters before continuing.
+The documentation page title, sidebar label, form fields and completion check follow the selected history framework. In the `tools` tab, `description` supplies comma-separated field headings and `prompts` supplies matching questions separated by `|`, in the same order. This supports PQRST, SOCRATES, OPQRST and OLD CARTS, as well as additional configured frameworks. Answers are kept separately for each tool during the current attempt, so changing frameworks never relabels an existing answer. Switching back restores that framework’s draft. Every visible field must contain at least 4 characters after trimming before continuing, so concise findings such as `8/10` are accepted. The matching question stays visible above the answer, and students can record a finding as not established rather than inventing it.
+
+## Student support
+
+The selection page offers PQRST and the Numerical Rating Scale as an optional starting point when both are available in the Sheet. The consultation page displays the selected framework's live question prompts. Clinical planning and SBAR show guidance from the Sheet's criteria and feedback; answer-length indicators show what is needed before review. Existing Sheet settings still control the clinical, SBAR and reflection minimum lengths.
+
+SBAR key-concept checks provide feedback. If every section meets the configured minimum length but some key phrases are missing, students can revise and review again or explicitly confirm they have considered the feedback before continuing. Blank or short sections cannot use this route. This supports equivalent wording without claiming that the checker validates clinical safety. The Google Sheets connection status is also visible on the briefing page.
 
 ## Consultation notes
 
@@ -31,3 +37,4 @@ The same editable notes panel appears on the ThingLink consultation and selected
 ## Educational safety
 
 The patient conversation runs in ThingLink AI. The site's clinical-decision, SBAR and reflection feedback uses deterministic keyword and length checks. These cannot prove that a response is clinically correct. The completion code is visible in the client-side content, and is not secure completion evidence. Supervisor/facilitator review is required for clinical competency decisions.
+

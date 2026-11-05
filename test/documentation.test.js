@@ -60,3 +60,10 @@ test('missing prompts have usable defaults and no selection has no form', () => 
   assert.match(fields[1].prompt, /character/);
   assert.equal(fields[2].prompt, 'How severe is it?');
 });
+
+test('concise findings such as a pain score count without requiring filler', () => {
+  const fields = getDocumentationFields({description: 'Severity', prompts: 'Rate the pain'});
+  assert.equal(documentationComplete(fields, {[fields[0].id]: '8/10'}), true);
+  assert.equal(documentationComplete(fields, {[fields[0].id]: '   '}), false);
+});
+

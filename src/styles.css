@@ -36,3 +36,11 @@
 .assessment-summary{display:block}
 .assessment-summary p{margin:0 0 8px}
 .assessment-summary p:last-child{margin:12px 0 0}
+
+/* Keep learning support readable alongside each task. */
+.learning-help{display:block}
+.learning-help p{margin:8px 0}
+.learning-help ul,.specialist-tools ul{padding-left:22px;font-size:14px;line-height:1.8}
+.response-progress{display:block;margin-top:8px;color:#557175;font-size:12px;font-weight:400;line-height:1.6}
+.response-progress.ok{color:#087562}
+

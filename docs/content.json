@@ -6,114 +6,106 @@
       "editor_note"
     ],
     [
+      "active_scenario",
+      "cyp",
+      "LIVE SWITCH: choose cyp or adult. Refresh/reopen the website. No date-based automatic reset."
+    ],
+    [
       "site_title",
-      "SPL9 | Virtual Practice Shift",
-      "Displayed across the website"
+      "SPL9 | Virtual Practice Shift"
     ],
     [
       "activity_title",
-      "Virtual Patient: Pain Assessment",
-      "Opening-page title"
+      "Virtual Patient: Pain Assessment"
     ],
     [
       "intro_heading",
-      "Your final virtual shift challenge",
-      "Introduction heading"
+      "Virtual shift. One more go at pain assessment before the week ends."
     ],
     [
       "intro_body",
-      "You are caring for a patient on a mental health inpatient ward. Use ThingLink to take a pain history, choose an appropriate intensity rating tool, document findings using your chosen framework, plan safe clinical decisions, hand over using SBAR and complete your Gibbs reflection.",
-      "Introductory brief; editable"
+      "You are caring for a patient on a mental health inpatient ward. Use ThingLink to take a pain history, choose an appropriate intensity rating tool, document findings using your chosen framework, plan safe clinical decisions, hand over using SBAR and complete your Gibbs reflection."
     ],
     [
       "intro_tasks",
-      "Review the patient profile|Choose a structured pain assessment|Talk with the patient and take notes|Document findings using your chosen framework|Plan and justify your clinical decisions|Submit an SBAR handover|Complete a Gibbs reflection to receive your Blackboard code",
-      "Separate tasks with |"
+      "Review the patient profile|Choose a structured pain assessment|Talk with the patient and take notes|Document findings using your chosen framework|Plan and justify your clinical decisions|Submit an SBAR handover|Complete a Gibbs reflection to receive your Blackboard code"
     ],
     [
       "patient_name",
-      "Alex Morgan",
-      "Fictional patient name"
+      "Alex Morgan"
     ],
     [
       "patient_age",
-      "46",
-      "Age in years"
+      "17"
     ],
     [
       "patient_pronouns",
-      "they/them",
-      "Pronouns used by patient"
+      "they/them"
     ],
     [
       "patient_location",
-      "Mental health inpatient ward",
-      "Ward type"
+      "Mental health inpatient ward"
     ],
     [
       "patient_context",
-      "Alex has been an inpatient for six days. During the afternoon they have withdrawn from group activities, declined their meal and asked to remain in their room. A colleague tells you Alex mentioned abdominal discomfort.",
-      "Background shown before meeting"
+      "Alex has been an inpatient for six days. During the afternoon they have withdrawn from group activities, declined their meal and asked to remain in their room. A colleague tells you Alex mentioned abdominal discomfort."
     ],
     [
       "patient_history",
-      "History: recurrent depression and anxiety. Constipation previously reported during admission. No recorded abdominal surgery. No known drug allergies. Medication chart available for review; do not assume medicines are appropriate without checking.",
-      "Editable history shown before meeting"
+      "History: recurrent depression and anxiety. Constipation previously reported during admission. No recorded abdominal surgery. No known drug allergies. Medication chart available for review."
     ],
     [
       "patient_opening",
-      "My stomach really hurts. I don’t want to make a fuss.",
-      "Initial patient statement"
+      "My stomach really hurts. I don’t want to make a fuss."
     ],
     [
       "patient_portrait_url",
       "",
-      "Use a publicly accessible direct image URL or upload patient.jpg into docs"
+      "Public image URL or leave blank"
     ],
     [
       "chat_help",
-      "Speak with Alex using the embedded ThingLink AI patient. Type notes in the panel on the right.",
-      "Instructions over patient chat"
+      "Speak with Alex using the embedded ThingLink AI patient. Type notes in the panel on the right."
+    ],
+    [
+      "chat_min_turns",
+      "5"
     ],
     [
       "code",
       "8553",
-      "Client-side completion code: visible in source; NOT tamper-proof"
+      "Not secure: accessible in published Sheet"
     ],
     [
       "reflection_min_chars",
-      "45",
-      "Minimum number of characters in each Gibbs response"
+      "45"
     ],
     [
       "clinical_min_chars",
-      "90",
-      "Minimum clinical action response length"
+      "20"
     ],
     [
       "sbar_min_chars",
-      "40",
-      "Minimum characters per SBAR section"
+      "20"
     ],
     [
       "footer_note",
-      "Educational simulation only. Fictional patient. Follow local policy, escalation procedures and prescribing guidance in actual clinical practice.",
-      "Footer wording"
+      "Educational simulation only. Fictional patient. Follow local escalation and clinical guidance in practice."
     ],
     [
       "thinglink_embed_url",
       "https://www.thinglink.com/view/scenario/2169112638494081892",
-      "ThingLink scenario iframe link"
+      "ThingLink scenario iframe URL"
     ],
     [
       "assessment_intro",
-      "Choose a structured way to take the pain history, and an intensity rating method appropriate for a patient who can tell you about their pain. Some specialist tools below are unsuitable for Alex.",
-      "Introductory guidance for assessment selection"
+      "Choose a structured way to take the pain history and an intensity rating method appropriate for a patient who can describe their pain. Some specialist tools are unsuitable for Alex.",
+      "Guidance on selection page"
     ],
     [
       "embedded_consultation_message",
       "Speak with Alex in the ThingLink window. Keep notes alongside it; the consultation does not automatically transfer into your documentation.",
-      "Patient conversation guidance"
+      "Patient consultation instructions"
     ]
   ],
   "tools": [
@@ -127,25 +119,285 @@
       "pqrst",
       "PQRST",
       "Provocation / Palliation, Quality, Region / Radiation, Severity, Timing",
-      "What makes it better or worse?|What does it feel like?|Where is it, and does it move?|How severe is it on a 0–10 scale?|When did it start and how has it changed?"
+      "What makes it better or worse?|What does it feel like?|Where is it, and does it move?|How severe is it on a 0–10 scale?|When did it start?"
     ],
     [
       "socrates",
       "SOCRATES",
-      "Site, Onset, Character, Radiation, Associations, Time course, Exacerbating / relieving factors, Severity",
-      "Where is the pain?|When did it begin?|What does it feel like?|Does it spread?|Any other symptoms?|How has it changed?|What affects it?|Rate it 0–10"
+      "Site, Onset, Character, Radiation, Associations, Time, Exacerbating factors, Severity",
+      "Where is the pain?|When did it begin?|What does it feel like?|Does it spread?|Any associated symptoms?|Has it changed?|What affects it?|Rate it from 0–10"
     ],
     [
       "opqrst",
       "OPQRST",
-      "Onset, Provocation / Palliation, Quality, Region / Radiation, Severity, Time",
-      "When did this begin?|What changes the pain?|Describe the pain|Where is it and does it radiate?|Rate it 0–10|Is it constant or intermittent?"
+      "Onset, Provocation, Quality, Region / Radiation, Severity, Time",
+      "When did it begin?|What changes the pain?|Describe the pain|Where is it?|How severe?|Is it constant?"
     ],
     [
       "oldcarts",
       "OLD CARTS",
       "Onset, Location, Duration, Character, Aggravating factors, Relieving factors, Timing, Severity",
-      "When did it begin?|Where is the pain?|How long has it lasted?|What is it like?|What worsens it?|What relieves it?|Has it changed?|How severe is it?"
+      "When did it begin?|Where is it?|How long has it lasted?|What is it like?|What worsens it?|What relieves it?|Has it changed?|How severe is it?"
+    ]
+  ],
+  "scenario_settings": [
+    [
+      "scenario",
+      "key",
+      "value",
+      "editor_note"
+    ],
+    [
+      "adult",
+      "scenario_label",
+      "Adult · Alex, 46",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "activity_title",
+      "Virtual Patient: Adult Pain Assessment",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "intro_heading",
+      "Your adult virtual practice shift",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "intro_body",
+      "You are caring for Alex, a 46-year-old on an adult mental health inpatient ward. Take a pain history, select an intensity scale, plan safe actions and give an SBAR handover.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "patient_name",
+      "Alex Morgan",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "patient_age",
+      "46",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "patient_pronouns",
+      "they/them",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "patient_location",
+      "Adult mental health inpatient ward",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "patient_context",
+      "Alex has been an inpatient for six days. During the afternoon they have withdrawn from group activities, declined their meal and asked to remain in their room. A colleague tells you Alex mentioned abdominal discomfort.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "patient_history",
+      "History: recurrent depression and anxiety. Constipation previously reported during admission. No recorded abdominal surgery. No known drug allergies. Medication chart available for review.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "patient_portrait_url",
+      "",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "thinglink_embed_url",
+      "",
+      "Paste a separate published adult ThingLink URL before switching to adult."
+    ],
+    [
+      "adult",
+      "assessment_intro",
+      "Choose a pain-history framework and a self-report intensity tool suitable for Alex, an alert 46-year-old who can communicate.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "embedded_consultation_message",
+      "Speak with the adult Alex in ThingLink. Keep notes alongside the conversation; they do not transfer automatically.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "intensity_guidance",
+      "Ask Alex to describe the intensity themselves. Check that they understand the scale; use their account rather than judging facial expression.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "specialist_tools_heading",
+      "When are specialist pain tools appropriate?",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "specialist_tools_intro",
+      "Alex is an alert adult who can self-report. Consider the intended population and purpose of each tool.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "consultation_extra_guidance",
+      "Explore associated symptoms, medicines, allergies, physical observations and Alex’s concerns. Do not attribute new physical symptoms to their mental health history.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "clinical_intro",
+      "Describe your priorities for Alex, 46: immediate assessment, escalation, repeated observations, safe pain management, communication and documentation. Explain why.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "reflection_context",
+      "Consider how you used Alex’s own account of pain and avoided diagnostic overshadowing.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "adult",
+      "thinglink_setup_note",
+      "Add the published link for your separate adult ThingLink scenario in scenario_settings. The CYP link is deliberately not reused.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "scenario_label",
+      "CYP · Alex, 17",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "activity_title",
+      "Virtual Patient: CYP Pain Assessment",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "intro_heading",
+      "Your children and young people virtual practice shift",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "intro_body",
+      "You are caring for Alex, a 17-year-old on a children and young people’s mental health inpatient ward. Ask clear, supportive questions, choose a suitable pain scale, document your findings and plan a safe handover.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "patient_name",
+      "Alex Morgan",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "patient_age",
+      "17",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "patient_pronouns",
+      "they/them",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "patient_location",
+      "Children and young people’s mental health inpatient ward (CAMHS)",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "patient_context",
+      "Alex, 17, has been on the CAMHS inpatient ward for six days for support with depression and anxiety. This afternoon they stopped joining activities, declined lunch and asked to stay in their room. A colleague reports that Alex mentioned tummy pain. Alex can communicate clearly but is worried about not being taken seriously.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "patient_history",
+      "Depression and anxiety; previous constipation during admission. No recorded abdominal surgery and no known drug allergies. Check the medication chart rather than assuming medicines or doses. Speak directly to Alex, explain confidentiality and its safety limits, seek their agreement, and ask how they would like a parent, carer or trusted adult involved. Do not dismiss new physical symptoms as anxiety.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "patient_portrait_url",
+      "",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "thinglink_embed_url",
+      "https://www.thinglink.com/view/scenario/2169112638494081892",
+      "Existing scenario: paste CYP prompt and publish today."
+    ],
+    [
+      "cyp",
+      "assessment_intro",
+      "Choose a structured history and an intensity rating suitable for a 17-year-old who can describe their pain. Use clear language and check Alex understands the scale.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "embedded_consultation_message",
+      "Speak with Alex, 17, in the ThingLink window. Ask one clear question at a time, respond to their worries and record the findings in your notes.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "intensity_guidance",
+      "Invite Alex to rate their own pain and check they understand the scale. A young person who can self-report does not automatically need an observational or faces scale.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "specialist_tools_heading",
+      "Which tools suit this young person?",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "specialist_tools_intro",
+      "Alex is 17 and can self-report. Choose for their understanding and communication needs, not age alone. Specialist tools still have specific purposes.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "consultation_extra_guidance",
+      "Explore other symptoms, medicines, allergies, observations and Alex’s worries. Explain what you are doing, check understanding, offer appropriate privacy and ask how they would like a parent, carer or trusted adult involved. Do not promise absolute confidentiality.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "clinical_intro",
+      "Describe your priorities for Alex, 17: assessment, urgent escalation, repeated observations, safe pain management and clear communication. Include Alex in decisions and consider confidentiality, appropriate support and safeguarding within local policy. Do not let these delay urgent physical care.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "reflection_context",
+      "Consider how you adapted your communication for a 17-year-old, respected their voice and privacy, and involved support appropriately.",
+      "Edit this profile; active_scenario in settings selects the live version."
+    ],
+    [
+      "cyp",
+      "thinglink_setup_note",
+      "Use the CYP prompt supplied with this update in the existing ThingLink scenario, then publish it. Changing this workbook cannot rewrite the external AI patient.",
+      "Edit this profile; active_scenario in settings selects the live version."
     ]
   ],
   "dialogue": [
@@ -155,191 +407,404 @@
       "keywords",
       "answer",
       "category",
-      "tip"
+      "tip",
+      "scenario"
     ],
     [
       "site",
-      "Where is the pain?",
+      "Pain location",
       "where pain|where hurt|where is it|which part|location|site of pain|area hurt",
-      "It is mostly here, low down on the right side of my tummy.",
+      "Mostly low down on the right side of my tummy.",
       "region",
-      "Ask whether pain moves anywhere else"
+      "",
+      "adult"
     ],
     [
       "onset",
-      "When did it begin?",
+      "Onset",
       "when start|when begin|how long|first notice|onset|started|began|sudden",
-      "It started about five hours ago. It came on quite suddenly.",
+      "It started five hours ago, quite suddenly.",
       "timing",
-      "Establish whether the pain has changed"
+      "",
+      "adult"
     ],
     [
       "quality",
-      "What does it feel like?",
+      "Quality",
       "what feel like|describe pain|kind of pain|sharp|dull|stabbing|burning|cramping|character|quality",
-      "It is sharp and quite constant. Sometimes it feels like a really bad stabbing pain.",
+      "It is sharp and constant. Sometimes it stabs.",
       "quality",
-      "Explore severity and duration"
+      "",
+      "adult"
     ],
     [
       "severity",
-      "How bad is the pain?",
+      "Severity",
       "out of 10|pain score|scale of|how severe|how bad|rate the pain|severity|0 to 10|0-10",
-      "About eight out of ten, and it is getting difficult to ignore.",
+      "About eight out of ten.",
       "severity",
-      "Check how it affects the patient"
+      "",
+      "adult"
     ],
     [
       "radiation",
-      "Does it spread?",
+      "Radiation",
       "spread|radiate|radiation|move anywhere|other places",
-      "It stays mostly on the lower right, although my whole tummy feels uncomfortable.",
+      "Mostly lower right, but my whole tummy feels uncomfortable.",
       "region",
-      "Include region and radiation in your notes"
+      "",
+      "adult"
     ],
     [
       "provocation",
-      "What makes it worse?",
+      "Provocation",
       "worse|aggravate|trigger|provok|movement|move around|cough",
-      "Moving and walking make it much worse. I have tried curling up.",
+      "Moving and walking make it much worse.",
       "provocation",
-      "Ask about relieving factors"
+      "",
+      "adult"
     ],
     [
       "relief",
-      "What makes it better?",
-      "better|reliev|ease|help the pain|anything help|painkiller|relief",
-      "Nothing has really helped. I have not been offered any pain relief yet.",
+      "Palliation",
+      "better|reliev|ease|help the pain|painkiller|relief",
+      "Nothing helps. I haven't had pain relief.",
       "provocation",
-      "Explore what care has been provided"
+      "",
+      "adult"
     ],
     [
       "course",
-      "Is the pain constant?",
-      "constant|come and go|intermittent|time course|getting worse|changed|progress|throughout day",
-      "It has been there most of the time and has become much worse over the last two hours.",
+      "Time course",
+      "constant|come and go|intermittent|getting worse|changed|progress|throughout day",
+      "Constant and much worse over the last two hours.",
       "timing",
-      "Worsening pain may change urgency"
+      "",
+      "adult"
     ],
     [
       "nausea",
-      "Any nausea or vomiting?",
+      "Nausea",
       "nausea|vomit|sick|being sick|thrown up",
-      "I feel very sick. I have not actually vomited.",
+      "I feel very sick but I haven't vomited.",
       "associated",
-      "Ask about eating, drinking and bowel function"
+      "",
+      "adult"
     ],
     [
       "fever",
-      "Any fever or chills?",
-      "temperature|fever|hot and cold|shiver|chills|sweat|sweaty",
-      "I feel hot and shivery, but I do not know my temperature.",
+      "Fever",
+      "temperature|fever|hot and cold|shiver|chills|sweat",
+      "I feel hot and shivery.",
       "associated",
-      "Consider requesting observations"
+      "",
+      "adult"
     ],
     [
       "bowel",
-      "When did you open your bowels?",
+      "Bowels",
       "bowel|poo|stool|constipat|last motion|toilet|pass wind|faeces",
-      "I have not opened my bowels for two days. That sometimes happens, but this pain feels very different.",
+      "I haven't opened my bowels for two days; this feels different.",
       "associated",
-      "Do not assume the cause of acute pain is constipation"
+      "",
+      "adult"
     ],
     [
       "urine",
-      "Any urinary symptoms?",
-      "urine|urinat|wee|pee|passing water|waterwork|bladder",
-      "I have not noticed burning when I go to the toilet.",
+      "Urine",
+      "urine|urinat|wee|pee|passing water|bladder",
+      "No burning when I pass urine.",
       "associated",
-      "Other assessment may be needed"
+      "",
+      "adult"
     ],
     [
       "food",
-      "Have you eaten or drunk?",
+      "Intake",
       "food|eat|appetite|lunch|meal|drink|fluid intake",
-      "I could not face lunch, and I have only had a few sips of water.",
+      "I couldn't face lunch and have had only sips of water.",
       "associated",
-      "Consider hydration and ongoing observations"
+      "",
+      "adult"
     ],
     [
       "impact",
-      "How is this affecting you?",
-      "affect|impact|sleep|walking|function|activities|manage|do anything",
-      "I cannot get comfortable, and it hurts too much to join in activities.",
+      "Function",
+      "affect|impact|sleep|walking|function|activities|manage",
+      "I can't get comfortable or join activities.",
       "impact",
-      "Consider comfort and reassurance"
+      "",
+      "adult"
     ],
     [
       "history",
-      "Have you experienced this before?",
+      "Previous pain",
       "before|previous|history of pain|happened|similar pain|past pain",
-      "Not like this. I have had constipation, but never a sharp pain this bad.",
+      "Not like this. I've had constipation before, but this is different.",
       "associated",
-      "Avoid diagnostic overshadowing"
+      "",
+      "adult"
     ],
     [
       "meds",
-      "Have you had pain relief or medicines?",
-      "medicin|medication|tablet|drug|analgesi|pain relief|paracetamol|ibuprofen|prescrib|treatment",
-      "I take my usual mental health medicines. I have not had anything for this pain yet. Please check my medication chart.",
+      "Medication",
+      "medicin|medication|tablet|drug|analgesi|pain relief|paracetamol|ibuprofen|prescrib",
+      "I'm on my usual medicines. Please check the medication chart.",
       "other",
-      "Review chart before any proposed medicine"
+      "",
+      "adult"
     ],
     [
       "allergy",
-      "Do you have allergies?",
+      "Allergies",
       "allerg|reaction to medicine|sensitive to medicine",
-      "I have no known drug allergies, as far as I know.",
+      "No known drug allergies as far as I know.",
       "other",
-      "Check the documented allergy status"
+      "",
+      "adult"
     ],
     [
       "observations",
-      "Can I have their observations?",
+      "Observations",
       "observations|vital signs|obs|blood pressure|pulse|heart rate|respiratory|oxygen saturations|spo2|temperature reading|news2|news score",
-      "The ward team records: respiratory rate 24/min, SpO₂ 97% on air, pulse 118/min, blood pressure 94/60 mmHg, temperature 38.6°C, alert. NEWS2 totals 7.",
+      "RR 24/min, SpO₂ 97% on air, pulse 118/min, BP 94/60 mmHg, temperature 38.6°C, alert. NEWS2 = 7.",
       "critical",
-      "This is urgent: appropriate escalation and reassessment are important"
+      "",
+      "adult"
     ],
     [
       "consent",
-      "Is it okay if I ask some questions?",
+      "Consent",
       "consent|okay if|may i ask|can i ask|permission|introduce",
-      "Yes, please. I am glad somebody is listening.",
+      "Yes, please. I'm glad somebody is listening.",
       "rapport",
-      "Use calm patient-centred communication"
+      "",
+      "adult"
     ],
     [
       "worry",
-      "Are you worried or frightened?",
-      "worried|anxious|afraid|scared|feeling mentally|mental state|distress",
-      "I am scared something is wrong. I was worried people would say it is just my anxiety.",
+      "Worries",
+      "worried|anxious|afraid|scared|mental state|distress",
+      "I'm worried someone will say it's just anxiety.",
       "rapport",
-      "Acknowledge concerns; do not dismiss physical symptoms"
+      "",
+      "adult"
     ],
     [
       "help",
-      "What would help right now?",
+      "Support",
       "need from me|how can i help|what would help|comfort|reassure|support you",
-      "I want someone to take this seriously and help with the pain.",
+      "Please take this seriously and help.",
       "rapport",
-      "Explain how you will seek help"
+      "",
+      "adult"
     ],
     [
       "other",
-      "Do you have other symptoms?",
+      "Other symptoms",
       "other symptom|anything else|any more symptom|associated symptom",
-      "I feel feverish and sick, and I am struggling to get comfortable.",
+      "I feel feverish and sick.",
       "associated",
-      "Follow up each important symptom"
+      "",
+      "adult"
     ],
     [
-      "pregnancy",
-      "Is pregnancy relevant?",
-      "pregnan|period|menstrual|gynaecolog",
-      "I would rather discuss private details confidentially with the clinician doing the examination.",
+      "site",
+      "Pain location",
+      "where pain|where hurt|where is it|which part|location|site of pain|area hurt",
+      "Mostly low down on the right side of my tummy.",
+      "region",
+      "",
+      "cyp"
+    ],
+    [
+      "onset",
+      "Onset",
+      "when start|when begin|how long|first notice|onset|started|began|sudden",
+      "It started five hours ago, quite suddenly.",
+      "timing",
+      "",
+      "cyp"
+    ],
+    [
+      "quality",
+      "Quality",
+      "what feel like|describe pain|kind of pain|sharp|dull|stabbing|burning|cramping|character|quality",
+      "It is sharp and constant. Sometimes it stabs.",
+      "quality",
+      "",
+      "cyp"
+    ],
+    [
+      "severity",
+      "Severity",
+      "out of 10|pain score|scale of|how severe|how bad|rate the pain|severity|0 to 10|0-10",
+      "About eight out of ten.",
+      "severity",
+      "",
+      "cyp"
+    ],
+    [
+      "radiation",
+      "Radiation",
+      "spread|radiate|radiation|move anywhere|other places",
+      "Mostly lower right, but my whole tummy feels uncomfortable.",
+      "region",
+      "",
+      "cyp"
+    ],
+    [
+      "provocation",
+      "Provocation",
+      "worse|aggravate|trigger|provok|movement|move around|cough",
+      "Moving and walking make it much worse.",
+      "provocation",
+      "",
+      "cyp"
+    ],
+    [
+      "relief",
+      "Palliation",
+      "better|reliev|ease|help the pain|painkiller|relief",
+      "Nothing helps. I haven't had pain relief.",
+      "provocation",
+      "",
+      "cyp"
+    ],
+    [
+      "course",
+      "Time course",
+      "constant|come and go|intermittent|getting worse|changed|progress|throughout day",
+      "Constant and much worse over the last two hours.",
+      "timing",
+      "",
+      "cyp"
+    ],
+    [
+      "nausea",
+      "Nausea",
+      "nausea|vomit|sick|being sick|thrown up",
+      "I feel very sick but I haven't vomited.",
+      "associated",
+      "",
+      "cyp"
+    ],
+    [
+      "fever",
+      "Fever",
+      "temperature|fever|hot and cold|shiver|chills|sweat",
+      "I feel hot and shivery.",
+      "associated",
+      "",
+      "cyp"
+    ],
+    [
+      "bowel",
+      "Bowels",
+      "bowel|poo|stool|constipat|last motion|toilet|pass wind|faeces",
+      "I haven't opened my bowels for two days; this feels different.",
+      "associated",
+      "",
+      "cyp"
+    ],
+    [
+      "urine",
+      "Urine",
+      "urine|urinat|wee|pee|passing water|bladder",
+      "No burning when I pass urine.",
+      "associated",
+      "",
+      "cyp"
+    ],
+    [
+      "food",
+      "Intake",
+      "food|eat|appetite|lunch|meal|drink|fluid intake",
+      "I couldn't face lunch and have had only sips of water.",
+      "associated",
+      "",
+      "cyp"
+    ],
+    [
+      "impact",
+      "Function",
+      "affect|impact|sleep|walking|function|activities|manage",
+      "I can't get comfortable or join activities.",
+      "impact",
+      "",
+      "cyp"
+    ],
+    [
+      "history",
+      "Previous pain",
+      "before|previous|history of pain|happened|similar pain|past pain",
+      "Not like this. I've had constipation before, but this is different.",
+      "associated",
+      "",
+      "cyp"
+    ],
+    [
+      "meds",
+      "Medication",
+      "medicin|medication|tablet|drug|analgesi|pain relief|paracetamol|ibuprofen|prescrib",
+      "I'm on my usual medicines. Please check the medication chart.",
       "other",
-      "Do not assume pregnancy risk or irrelevant histories"
+      "",
+      "cyp"
+    ],
+    [
+      "allergy",
+      "Allergies",
+      "allerg|reaction to medicine|sensitive to medicine",
+      "No known drug allergies as far as I know.",
+      "other",
+      "",
+      "cyp"
+    ],
+    [
+      "observations",
+      "Observations",
+      "observations|vital signs|obs|blood pressure|pulse|heart rate|respiratory|oxygen saturations|spo2|temperature reading|news2|news score",
+      "Ward observation chart: RR 24/min, SpO₂ 97% on air, pulse 118/min, BP 94/60 mmHg, temperature 38.6°C, alert. For this 17-year-old teaching case, NEWS2 = 7 using scale 1. Follow the service’s approved age-appropriate escalation pathway; do not wait for a score if concerned.",
+      "critical",
+      "",
+      "cyp"
+    ],
+    [
+      "consent",
+      "Consent",
+      "consent|okay if|may i ask|can i ask|permission|introduce",
+      "Yes, please. I'm glad somebody is listening.",
+      "rapport",
+      "",
+      "cyp"
+    ],
+    [
+      "worry",
+      "Worries",
+      "worried|anxious|afraid|scared|mental state|distress",
+      "I’m scared you’ll think it’s just my anxiety. Can you explain what’s happening?",
+      "rapport",
+      "",
+      "cyp"
+    ],
+    [
+      "help",
+      "Support",
+      "need from me|how can i help|what would help|comfort|reassure|support you",
+      "Please take the pain seriously. Can you tell me what happens next? I might want my mum called, but please ask me first.",
+      "rapport",
+      "",
+      "cyp"
+    ],
+    [
+      "other",
+      "Other symptoms",
+      "other symptom|anything else|any more symptom|associated symptom",
+      "I feel feverish and sick.",
+      "associated",
+      "",
+      "cyp"
     ]
   ],
   "actions": [
@@ -349,55 +814,116 @@
       "accepted_phrases",
       "feedback_if_present",
       "feedback_if_missing",
-      "required"
+      "required",
+      "scenario"
     ],
     [
       "urgency",
-      "Recognise abnormal observations and urgency",
-      "news2 7|news of 7|news score 7|high news|urgent deterioration|acutely unwell|seriously unwell|sepsis risk|possible sepsis|shock risk|hypotens|tachycard|urgent medical review",
-      "You recognised that the presentation requires urgent action.",
-      "Identify why the vital signs and clinical presentation suggest urgent deterioration.",
-      "YES"
+      "Recognise urgency",
+      "news2 7|news score 7|high news|urgent deterioration|acutely unwell|sepsis risk|possible sepsis|hypotens|tachycard|urgent medical review",
+      "You recognised the need for urgent review.",
+      "Identify why observations indicate urgency.",
+      "NO",
+      "adult"
     ],
     [
       "escalation",
       "Escalate promptly",
-      "escalat|contact senior|inform nurse in charge|call nurse in charge|urgent medical review|call doctor|call medical team|request medical review|emergency response|rapid response",
-      "You included an appropriate escalation route.",
-      "Say who you would contact immediately and why.",
-      "YES"
+      "escalat|contact senior|nurse in charge|urgent medical review|call doctor|medical team|rapid response",
+      "You described escalation.",
+      "Specify who you would urgently contact.",
+      "NO",
+      "adult"
     ],
     [
       "assessment",
-      "Undertake ABCDE and repeat observations",
-      "abcde|a-e assessment|repeat observations|repeat obs|recheck vital|monitor observations|continuous monitoring",
-      "You included further assessment or monitoring.",
-      "Consider structured reassessment such as ABCDE and repeated vital signs.",
-      "YES"
+      "ABCDE and repeat observations",
+      "abcde|a-e assessment|repeat observations|repeat obs|recheck vital|monitor observations",
+      "You described further assessment.",
+      "Consider ABCDE and repeat observations.",
+      "NO",
+      "adult"
     ],
     [
       "pain",
-      "Address pain and comfort safely",
-      "pain relief|analgesi|comfort|reposition|check prescription|prescribed pain|offer support|pain management",
-      "You considered symptom relief and comfort.",
-      "Explain how you would support pain management within your professional role and prescribing arrangements.",
-      "YES"
+      "Pain and comfort",
+      "pain relief|analgesi|comfort|reposition|check prescription|prescribed pain|pain management",
+      "You considered pain management.",
+      "Describe symptom relief within your role.",
+      "NO",
+      "adult"
     ],
     [
       "communication",
-      "Reassure and keep patient informed",
+      "Keep patient informed",
       "reassur|explain|stay with|inform patient|support patient|listen to patient|communicat|validate",
-      "You included patient-centred communication.",
-      "Consider how to explain actions and reassure the patient.",
-      "NO"
+      "You considered communication.",
+      "Consider reassurance and explanation.",
+      "NO",
+      "adult"
     ],
     [
       "documentation",
-      "Document and hand over",
+      "Document findings",
       "document|record|handover|sbar|write notes|clinical notes",
-      "You planned to record or communicate findings.",
-      "Remember to document the assessment and communicate key findings.",
-      "NO"
+      "You included documentation.",
+      "Remember to document and communicate findings.",
+      "NO",
+      "adult"
+    ],
+    [
+      "urgency",
+      "Recognise urgency",
+      "news2 7|news score 7|high news|urgent deterioration|acutely unwell|sepsis risk|possible sepsis|hypotens|tachycard|urgent medical review",
+      "You recognised the need for urgent review.",
+      "Identify why observations indicate urgency.",
+      "NO",
+      "cyp"
+    ],
+    [
+      "escalation",
+      "Escalate promptly",
+      "escalat|contact senior|nurse in charge|urgent medical review|call doctor|medical team|rapid response",
+      "You described escalation.",
+      "Specify who you would urgently contact.",
+      "NO",
+      "cyp"
+    ],
+    [
+      "assessment",
+      "ABCDE and repeat observations",
+      "abcde|a-e assessment|repeat observations|repeat obs|recheck vital|monitor observations",
+      "You described further assessment.",
+      "Consider ABCDE and repeat observations.",
+      "NO",
+      "cyp"
+    ],
+    [
+      "pain",
+      "Pain and comfort",
+      "pain relief|analgesi|comfort|reposition|check prescription|prescribed pain|pain management",
+      "You considered pain management.",
+      "Describe symptom relief within your role.",
+      "NO",
+      "cyp"
+    ],
+    [
+      "communication",
+      "Involve the young person and communicate clearly",
+      "reassur|explain|stay with|inform patient|support patient|listen to patient|communicat|validate|check understanding|confidential|privacy|trusted adult|parent|carer|safeguard|consent",
+      "You considered communication.",
+      "Speak directly to Alex, explain actions and check understanding. Consider privacy, confidentiality limits and who Alex wants involved; follow safeguarding policy without delaying urgent care.",
+      "NO",
+      "cyp"
+    ],
+    [
+      "documentation",
+      "Document findings",
+      "document|record|handover|sbar|write notes|clinical notes",
+      "You included documentation.",
+      "Remember to document and communicate findings.",
+      "NO",
+      "cyp"
     ]
   ],
   "sbar": [
@@ -406,72 +932,152 @@
       "title",
       "key_concepts",
       "minimum_hits",
-      "feedback_if_missing"
+      "feedback_if_missing",
+      "scenario"
     ],
     [
       "S",
       "Situation",
-      "alex|patient|abdominal|tummy|pain|8/10|8 out of 10|acute|severe",
-      "2",
-      "Identify the patient, immediate pain concern and severity."
+      "alex|patient|abdominal|tummy|pain|8/10|acute|severe",
+      "1",
+      "Identify patient and main concern.",
+      "adult"
     ],
     [
       "B",
       "Background",
       "mental health|inpatient|admission|depression|anxiety|constipat|five hours|5 hours|sudden|no known allergies",
-      "2",
-      "Include relevant history and the onset of symptoms."
+      "1",
+      "Summarise history and onset.",
+      "adult"
     ],
     [
       "A",
       "Assessment",
       "right lower|lower right|sharp|nausea|shiver|fever|38.6|118|94/60|24|news2|news 7|deteriorat|hypotens",
-      "3",
-      "Include important PQRST findings and abnormal observations."
+      "1",
+      "Include findings and observations.",
+      "adult"
     ],
     [
       "R",
       "Recommendation",
       "urgent|immediate|as soon|escalat|medical review|doctor|senior|nurse in charge|repeat obs|abcde|monitor|pain relief|review now",
-      "2",
-      "State your escalation request and what should happen next."
+      "1",
+      "Request appropriate urgent action.",
+      "adult"
+    ],
+    [
+      "S",
+      "Situation",
+      "alex|patient|abdominal|tummy|pain|8/10|acute|severe|17|seventeen|young person|adolescent",
+      "1",
+      "Identify Alex, age 17, and the immediate pain concern.",
+      "cyp"
+    ],
+    [
+      "B",
+      "Background",
+      "mental health|inpatient|admission|depression|anxiety|constipat|five hours|5 hours|sudden|no known allergies|camhs|young person|17",
+      "1",
+      "Include the CAMHS context, relevant history and onset; avoid attributing physical symptoms to anxiety.",
+      "cyp"
+    ],
+    [
+      "A",
+      "Assessment",
+      "right lower|lower right|sharp|nausea|shiver|fever|38.6|118|94/60|24|news2|news 7|deteriorat|hypotens",
+      "1",
+      "Include findings and observations.",
+      "cyp"
+    ],
+    [
+      "R",
+      "Recommendation",
+      "urgent|immediate|as soon|escalat|medical review|doctor|senior|nurse in charge|repeat obs|abcde|monitor|pain relief|review now|age appropriate|young person|parent|carer",
+      "1",
+      "Request urgent medical review and ongoing observations; communicate Alex’s support and privacy preferences where relevant.",
+      "cyp"
     ]
   ],
   "reflection": [
     [
       "stage",
       "question",
-      "tip"
+      "tip",
+      "scenario"
     ],
     [
       "Description",
       "Briefly describe what happened during your assessment and handover.",
-      "Focus on what you did, not imagined details."
+      "Focus on what you did.",
+      "adult"
     ],
     [
       "Feelings",
-      "How did you feel, or what did you notice about your confidence when asking questions?",
-      "It is acceptable to be uncertain."
+      "How did you feel, or what did you notice about your confidence?",
+      "Be specific.",
+      "adult"
     ],
     [
       "Evaluation",
       "What went well, and what was difficult?",
-      "Identify a concrete strength and an area for improvement."
+      "Include strengths and challenges.",
+      "adult"
     ],
     [
       "Analysis",
       "Why did you choose your pain-history framework and intensity scale? Were they appropriate for Alex?",
-      "Explicitly name your chosen tool and discuss its usefulness."
+      "Name and justify your tool.",
+      "adult"
     ],
     [
       "Conclusion",
-      "What would you do differently if you repeated this assessment?",
-      "Identify a specific lesson learnt."
+      "What would you do differently next time?",
+      "Say what you learnt.",
+      "adult"
     ],
     [
       "Action Plan",
       "What specific action will you take to improve your next pain assessment?",
-      "Make the future action achievable and observable."
+      "Make your plan actionable.",
+      "adult"
+    ],
+    [
+      "Description",
+      "Briefly describe what happened during your assessment and handover.",
+      "Focus on what you did.",
+      "cyp"
+    ],
+    [
+      "Feelings",
+      "How did you feel, or what did you notice about your confidence?",
+      "Be specific.",
+      "cyp"
+    ],
+    [
+      "Evaluation",
+      "What went well, and what was difficult?",
+      "Include strengths and challenges.",
+      "cyp"
+    ],
+    [
+      "Analysis",
+      "Why did your history framework, pain scale and communication approach suit Alex, aged 17?",
+      "Name your tools. Explain how you checked understanding and included the young person’s voice.",
+      "cyp"
+    ],
+    [
+      "Conclusion",
+      "What would you do differently next time?",
+      "Say what you learnt.",
+      "cyp"
+    ],
+    [
+      "Action Plan",
+      "What specific action will you take to improve your next pain assessment?",
+      "Make your plan actionable.",
+      "cyp"
     ]
   ],
   "scales": [
@@ -481,55 +1087,62 @@
       "type",
       "description",
       "suitability",
-      "student_guidance"
+      "student_guidance",
+      "scenario"
     ],
     [
       "nrs",
       "Numerical Rating Scale (NRS)",
       "intensity",
-      "A patient rates their pain from 0 (no pain) to 10 (worst imaginable pain).",
+      "Patient rates current pain from 0 (no pain) to 10 (worst imaginable).",
       "Appropriate",
-      "Ask Alex to rate the current pain from 0 to 10."
+      "Ask Alex for a score from 0 to 10.",
+      "adult"
     ],
     [
       "vrs",
       "Verbal Rating Scale (VRS/VDS)",
       "intensity",
-      "Patient describes the pain as no pain, mild, moderate, severe or similar descriptors.",
+      "Patient describes intensity using words such as none, mild, moderate or severe.",
       "Appropriate",
-      "Ask Alex to choose a word that best describes the intensity."
+      "Ask Alex which word best describes the pain.",
+      "adult"
     ],
     [
       "vas",
       "Visual Analogue Scale (VAS)",
       "intensity",
-      "The patient marks their pain intensity on a continuous line, often 100 mm.",
+      "Patient marks a point on a continuous line, often 100 mm.",
       "Requires a visual tool",
-      "A true VAS requires a line the patient can mark. Asking for a 0–10 number is not a VAS. Acknowledge the limits of remote delivery."
+      "A true VAS requires marking a line; asking 0 to 10 verbally is not VAS. Consider limits of remote delivery.",
+      "adult"
     ],
     [
       "faces",
       "Wong–Baker FACES Pain Rating Scale",
       "intensity",
-      "A pictorial self-report scale using a series of faces.",
-      "May be appropriate with a validated chart",
-      "Use the actual licensed/approved chart if available. Do not judge Alex’s pain from facial expression alone."
+      "A validated pictorial self-report rating scale with faces.",
+      "Requires an appropriate chart",
+      "Use a properly reproduced chart if available. Do not infer self-reported pain from facial expression alone.",
+      "adult"
     ],
     [
       "mcgill",
       "McGill Pain Questionnaire (MPQ)",
       "adjunct",
-      "A more detailed multidimensional questionnaire about sensory and emotional aspects of pain.",
+      "Multidimensional questionnaire addressing sensory and emotional characteristics.",
       "Possible adjunct; not a substitute for acute assessment",
-      "May be too lengthy for urgent deterioration. It supplements, rather than replaces, immediate safety assessment."
+      "May be too lengthy for urgent deterioration; use as an additional tool where appropriate.",
+      "adult"
     ],
     [
       "diagram",
       "Body pain diagram",
       "adjunct",
-      "Patient indicates pain distribution on a body outline.",
+      "Patient identifies pain location and spread on an outline.",
       "Possible adjunct",
-      "Useful for documenting site and radiation; does not replace a pain history or acuity assessment."
+      "Helps record the distribution of pain; does not replace a focused history.",
+      "adult"
     ],
     [
       "flacc",
@@ -537,31 +1150,125 @@
       "specialist",
       "Behaviour-based assessment: Face, Legs, Activity, Cry, Consolability.",
       "Not indicated for Alex",
-      "Typically used in children or people unable to self-report, rather than an alert adult who can communicate."
+      "Behavioural tools may be useful when a person cannot self-report. Alex, 46, can communicate, so use their own report.",
+      "adult"
     ],
     [
       "cries",
       "CRIES",
       "specialist",
-      "Neonatal pain assessment: Crying, Requires oxygen, Increased vital signs, Expression, Sleeplessness.",
+      "Neonatal assessment: Crying, oxygen requirement, vital signs, expression, sleeplessness.",
       "Not indicated for Alex",
-      "Intended for newborns, not a verbal 46-year-old adult."
+      "Intended for newborns; it does not suit this patient.",
+      "adult"
     ],
     [
       "comfort",
       "COMFORT Scale",
       "specialist",
-      "Behavioural/physiological assessment used in critical care settings.",
+      "Behavioural and physiological observations used in critical care.",
       "Not indicated for Alex",
-      "For intensive care populations; not the first choice for an adult who can self-report."
+      "Used in specialist critical care settings, not a first-choice verbal self-report scale.",
+      "adult"
     ],
     [
       "abbey",
       "Abbey Pain Scale",
       "specialist",
-      "Observational tool for people with advanced dementia who cannot reliably communicate their pain.",
+      "Observational scale for advanced dementia when people cannot reliably communicate pain.",
       "Not indicated for Alex",
-      "Designed for patients who cannot reliably self-report; Alex can answer questions."
+      "Designed for people with advanced dementia who cannot reliably self-report; it does not suit this patient.",
+      "adult"
+    ],
+    [
+      "nrs",
+      "Numerical Rating Scale (NRS)",
+      "intensity",
+      "Patient rates current pain from 0 (no pain) to 10 (worst imaginable).",
+      "Appropriate",
+      "Ask Alex for a score from 0 to 10.",
+      "cyp"
+    ],
+    [
+      "vrs",
+      "Verbal Rating Scale (VRS/VDS)",
+      "intensity",
+      "Patient describes intensity using words such as none, mild, moderate or severe.",
+      "Appropriate",
+      "Ask Alex which word best describes the pain.",
+      "cyp"
+    ],
+    [
+      "vas",
+      "Visual Analogue Scale (VAS)",
+      "intensity",
+      "Patient marks a point on a continuous line, often 100 mm.",
+      "Requires a visual tool",
+      "A true VAS requires marking a line; asking 0 to 10 verbally is not VAS. Consider limits of remote delivery.",
+      "cyp"
+    ],
+    [
+      "faces",
+      "Wong–Baker FACES Pain Rating Scale",
+      "intensity",
+      "A validated pictorial self-report rating scale with faces.",
+      "Requires an appropriate chart",
+      "Use a properly reproduced validated chart if Alex prefers it and understands it. Do not infer pain from facial expression or choose it just because Alex is under 18.",
+      "cyp"
+    ],
+    [
+      "mcgill",
+      "McGill Pain Questionnaire (MPQ)",
+      "adjunct",
+      "Multidimensional questionnaire addressing sensory and emotional characteristics.",
+      "Possible adjunct; not a substitute for acute assessment",
+      "May be too lengthy for urgent deterioration; use as an additional tool where appropriate.",
+      "cyp"
+    ],
+    [
+      "diagram",
+      "Body pain diagram",
+      "adjunct",
+      "Patient identifies pain location and spread on an outline.",
+      "Possible adjunct",
+      "Helps record the distribution of pain; does not replace a focused history.",
+      "cyp"
+    ],
+    [
+      "flacc",
+      "FLACC",
+      "specialist",
+      "Behaviour-based assessment: Face, Legs, Activity, Cry, Consolability.",
+      "Not indicated for Alex",
+      "Behavioural tools may be useful when a child or young person cannot self-report. Alex, 17, can describe their pain, so use their own report.",
+      "cyp"
+    ],
+    [
+      "cries",
+      "CRIES",
+      "specialist",
+      "Neonatal assessment: Crying, oxygen requirement, vital signs, expression, sleeplessness.",
+      "Not indicated for Alex",
+      "Intended for newborns; it does not suit this patient.",
+      "cyp"
+    ],
+    [
+      "comfort",
+      "COMFORT Scale",
+      "specialist",
+      "Behavioural and physiological observations used in critical care.",
+      "Not indicated for Alex",
+      "Used in specialist critical care settings, not a first-choice verbal self-report scale.",
+      "cyp"
+    ],
+    [
+      "abbey",
+      "Abbey Pain Scale",
+      "specialist",
+      "Observational scale for advanced dementia when people cannot reliably communicate pain.",
+      "Not indicated for Alex",
+      "Designed for people with advanced dementia who cannot reliably self-report; it does not suit this patient.",
+      "cyp"
     ]
   ]
 }

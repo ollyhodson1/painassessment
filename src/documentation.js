@@ -24,6 +24,7 @@ export function getDocumentationFields(tool) {
   });
 }
 
-export function documentationComplete(fields, answers, minimumLength = 12) {
+export function documentationComplete(fields, answers, minimumLength = 4) {
   return fields.length > 0 && fields.every(field => String(answers[field.id] ?? '').trim().length >= minimumLength);
 }
+

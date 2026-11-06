@@ -8,8 +8,8 @@ const initial = JSON.parse(await readFile(new URL('../public/content.json', impo
 const tools = convertContent(initial).tools;
 const expected = {
   pqrst: ['Provocation / Palliation', 'Quality', 'Region / Radiation', 'Severity', 'Timing'],
-  socrates: ['Site', 'Onset', 'Character', 'Radiation', 'Associations', 'Time course', 'Exacerbating / relieving factors', 'Severity'],
-  opqrst: ['Onset', 'Provocation / Palliation', 'Quality', 'Region / Radiation', 'Severity', 'Time'],
+  socrates: ['Site', 'Onset', 'Character', 'Radiation', 'Associations', 'Time', 'Exacerbating factors', 'Severity'],
+  opqrst: ['Onset', 'Provocation', 'Quality', 'Region / Radiation', 'Severity', 'Time'],
   oldcarts: ['Onset', 'Location', 'Duration', 'Character', 'Aggravating factors', 'Relieving factors', 'Timing', 'Severity'],
 };
 
@@ -60,3 +60,10 @@ test('missing prompts have usable defaults and no selection has no form', () => 
   assert.match(fields[1].prompt, /character/);
   assert.equal(fields[2].prompt, 'How severe is it?');
 });
+
+test('concise findings such as a pain score count without requiring filler', () => {
+  const fields = getDocumentationFields({description: 'Severity', prompts: 'Rate the pain'});
+  assert.equal(documentationComplete(fields, {[fields[0].id]: '8/10'}), true);
+  assert.equal(documentationComplete(fields, {[fields[0].id]: '   '}), false);
+});
+

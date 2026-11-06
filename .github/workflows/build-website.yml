@@ -7,6 +7,7 @@ on:
     paths:
       - 'src/**'
       - 'public/**'
+      - 'test/**'
       - 'index.html'
       - 'package.json'
       - '.github/workflows/build-website.yml'
@@ -36,6 +37,9 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
+      - name: Test the content and scenario switch
+        run: npm test
+
       - name: Build self-contained React website
         run: npm run build
 
@@ -60,3 +64,4 @@ jobs:
             git commit -m 'Build standalone React site'
             git push
           fi
+

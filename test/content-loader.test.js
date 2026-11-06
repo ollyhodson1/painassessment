@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {convertContent, loadContent, parseSheet, SHEET_NAMES} from '../src/content-loader.js';
 
+import {resolveScenario} from '../src/scenario.js';
 const initial = JSON.parse(await readFile(new URL('../public/content.json', import.meta.url), 'utf8'));
 const wrapped = rows => `/*O_o*/\ngoogle.visualization.Query.setResponse(${JSON.stringify({
   status: 'ok', table: {
@@ -19,28 +20,28 @@ test('all public tabs load, and a fresh request picks up a changed setting', asy
     const name = new URL(url).searchParams.get('sheet');
     requests.push({url, options});
     return response(name === 'settings'
-      ? [['key', 'value'], ['intro_heading', heading], ['patient_portrait_url', '']]
+      ? [['key', 'value'], ['footer_note', heading], ['patient_portrait_url', '']]
       : initial[name]);
   };
   const first = await loadContent(initial, {fetchImpl});
-  assert.equal(first.data.settings.intro_heading, heading);
-  assert.equal(first.data.settings.thinglink_embed_url, convertContent(initial).settings.thinglink_embed_url);
+  assert.equal(first.data.settings.footer_note, heading);
+  assert.equal(first.data.settings.thinglink_embed_url, resolveScenario(convertContent(initial)).settings.thinglink_embed_url);
   assert.equal(first.data.settings.patient_portrait_url, '');
   assert.deepEqual(first.liveTabs, SHEET_NAMES);
   assert.deepEqual(first.failures, []);
   heading = 'Another edit, without a rebuild';
   const second = await loadContent(initial, {fetchImpl});
-  assert.equal(second.data.settings.intro_heading, heading);
-  assert.equal(requests.length, 14);
+  assert.equal(second.data.settings.footer_note, heading);
+  assert.equal(requests.length, SHEET_NAMES.length * 2);
   assert.ok(requests.every(({options, url}) => options.cache === 'no-store'
     && options.credentials === 'omit' && new URL(url).searchParams.has('v')));
 });
 
 test('a private sheet keeps the complete bundled simulation and reports every failure', async () => {
   const result = await loadContent(initial, {fetchImpl: async () => ({ok: false, status: 401})});
-  assert.deepEqual(result.data, convertContent(initial));
+  assert.deepEqual(result.data, resolveScenario(convertContent(initial)));
   assert.equal(result.liveTabs.length, 0);
-  assert.equal(result.failures.length, 7);
+  assert.equal(result.failures.length, SHEET_NAMES.length);
   assert.ok(result.failures.every(failure => /public read access/.test(failure.message)));
 });
 
@@ -48,11 +49,11 @@ test('one invalid tab falls back without discarding successful sheet edits', asy
   const result = await loadContent(initial, {fetchImpl: async url => {
     const name = new URL(url).searchParams.get('sheet');
     if (name === 'scales') return response([['wrong_heading'], ['invalid']]);
-    if (name === 'settings') return response([['key', 'value'], ['intro_heading', 'Live content']]);
+    if (name === 'settings') return response([['key', 'value'], ['footer_note', 'Live content']]);
     return response(initial[name]);
   }});
-  assert.equal(result.data.settings.intro_heading, 'Live content');
-  assert.deepEqual(result.data.scales, convertContent(initial).scales);
+  assert.equal(result.data.settings.footer_note, 'Live content');
+  assert.deepEqual(result.data.scales, resolveScenario(convertContent(initial)).scales);
   assert.deepEqual(result.failures.map(failure => failure.name), ['scales']);
 });
 
@@ -77,6 +78,7 @@ test('a stalled Google request times out and leaves the simulation usable', asyn
     signal.addEventListener('abort', () => reject(new Error('Aborted')), {once: true});
   });
   const result = await loadContent(initial, {fetchImpl, timeoutMs: 10});
-  assert.deepEqual(result.data, convertContent(initial));
+  assert.deepEqual(result.data, resolveScenario(convertContent(initial)));
   assert.ok(result.failures.every(failure => /timed out/.test(failure.message)));
 });
+

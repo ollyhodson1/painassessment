@@ -1,5 +1,6 @@
+import {resolveScenario, validateScenarioTab} from './scenario.js';
 export const SHEET_ID = '1CbcexTUQLweNGkRUinF1wPGzJFYe2fv6MS2m2woO4oQ';
-export const SHEET_NAMES = ['settings', 'tools', 'dialogue', 'actions', 'sbar', 'reflection', 'scales'];
+export const SHEET_NAMES = ['settings', 'tools', 'dialogue', 'actions', 'sbar', 'reflection', 'scales', 'scenario_settings'];
 
 export function convertContent(tabs) {
   return Object.fromEntries(Object.entries(tabs).map(([name, rows]) => {
@@ -56,7 +57,7 @@ export async function loadContent(initial, {fetchImpl = fetch, timeoutMs = 10000
           ? 'Google Sheets requires sign-in. Enable public read access to the content bank.'
           : `Google Sheets is unavailable (HTTP ${response.status}).`);
       }
-      return parseSheet(await response.text(), name, initial[name][0]);
+      return validateScenarioTab(name, parseSheet(await response.text(), name, initial[name][0]));
     } catch (error) {
       if (controller.signal.aborted) throw new Error('Google Sheets request was cancelled or timed out.');
       throw error;
@@ -75,5 +76,6 @@ export async function loadContent(initial, {fetchImpl = fetch, timeoutMs = 10000
   const failures = SHEET_NAMES.filter(name => !liveTabs.includes(name)).map(name => ({
     name, message: results[SHEET_NAMES.indexOf(name)].reason?.message || 'Could not reach Google Sheets.',
   }));
-  return {data, liveTabs, failures};
+  return {data: resolveScenario(data), liveTabs, failures};
 }
+

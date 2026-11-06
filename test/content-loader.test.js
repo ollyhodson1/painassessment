@@ -1,9 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {convertContent, loadContent, parseSheet, SHEET_NAMES} from '../src/content-loader.js';
+import {convertContent, loadContent, parseSheet, SHEET_NAMES, SHEET_TABS} from '../src/content-loader.js';
 
 import {resolveScenario} from '../src/scenario.js';
+const sheetNameFromUrl = url => Object.keys(SHEET_TABS).find(name => SHEET_TABS[name] === new URL(url).searchParams.get('sheet'));
 const initial = JSON.parse(await readFile(new URL('../public/content.json', import.meta.url), 'utf8'));
 const wrapped = rows => `/*O_o*/\ngoogle.visualization.Query.setResponse(${JSON.stringify({
   status: 'ok', table: {
@@ -17,7 +18,7 @@ test('all public tabs load, and a fresh request picks up a changed setting', asy
   let heading = 'Updated heading from the sheet';
   const requests = [];
   const fetchImpl = async (url, options) => {
-    const name = new URL(url).searchParams.get('sheet');
+    const name = sheetNameFromUrl(url);
     requests.push({url, options});
     return response(name === 'settings'
       ? [['key', 'value'], ['footer_note', heading], ['patient_portrait_url', '']]
@@ -47,7 +48,7 @@ test('a private sheet keeps the complete bundled simulation and reports every fa
 
 test('one invalid tab falls back without discarding successful sheet edits', async () => {
   const result = await loadContent(initial, {fetchImpl: async url => {
-    const name = new URL(url).searchParams.get('sheet');
+    const name = sheetNameFromUrl(url);
     if (name === 'scales') return response([['wrong_heading'], ['invalid']]);
     if (name === 'settings') return response([['key', 'value'], ['footer_note', 'Live content']]);
     return response(initial[name]);

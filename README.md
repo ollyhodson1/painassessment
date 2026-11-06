@@ -10,7 +10,7 @@ For local development, run `npm install` and `npm run dev`. Run `npm test` for t
 
 [Simulation content bank](https://docs.google.com/spreadsheets/d/1CbcexTUQLweNGkRUinF1wPGzJFYe2fv6MS2m2woO4oQ/edit)
 
-The live site reads eight tabs: `settings`, `tools`, `dialogue`, `actions`, `sbar`, `reflection`, `scales` and `scenario_settings`. Keep their column headings and row identifiers intact. The site's public `/gviz/tq` requests must be able to read the workbook without a Google sign-in. For this integration, set **Share → General access → Anyone with the link → Viewer**. Sharing remains read-only for visitors; only your authorised editors can change content. Test from a signed-out browser, since your own Google login can hide an access problem.
+The live site reads eight sources: `settings`, `tools`, `scenario_dialogue`, `scenario_actions`, `scenario_sbar`, `scenario_reflection`, `scenario_scales` and `scenario_settings`. Keep their column headings and row identifiers intact. The site's public `/gviz/tq` requests must be able to read the workbook without a Google sign-in. For this integration, set **Share → General access → Anyone with the link → Viewer**. Sharing remains read-only for visitors; only your authorised editors can change content. Test from a signed-out browser, since your own Google login can hide an access problem.
 
 **Anyone visiting the simulation can inspect the readable rows, including answers and the Blackboard code.** Keep no private or student data in the content bank. Changes are fetched when the site opens or when **Refresh content** in the footer is pressed; no GitHub rebuild is needed for sheet edits. Google may take a short time to serve an edit. An attempt already open does not automatically reload content in the middle of a student's work.
 
@@ -41,7 +41,7 @@ The patient conversation runs in ThingLink AI. The site's clinical-decision, SBA
 
 ## Adult / CYP switch
 
-The live switch is `settings!B2` (`active_scenario`): choose `cyp` or `adult`. The saved default is CYP (Alex, 17, CAMHS); the adult profile is Alex, 46. There is no automatic date reset. `scenario_settings` stores separate key/value settings for each profile. The selected profile overrides unprefixed legacy profile rows in settings, including intentionally blank image and ThingLink URLs. `tools` stays shared. The other content tabs have a final `scenario` column: adult, cyp, or all. Scenario-specific rows override shared rows with the same identity.
+The live switch is `settings!B2` (`active_scenario`): choose `cyp` or `adult`. The saved default is CYP (Alex, 17, CAMHS); the adult profile is Alex, 46. There is no automatic date reset. `scenario_settings` stores separate key/value settings for each profile. The selected profile overrides unprefixed legacy profile rows in settings, including intentionally blank image and ThingLink URLs. `tools` stays shared. The five scenario_ content-bank tabs have a final `scenario` column: adult, cyp, or all. Scenario-specific rows override shared rows with the same identity.
 
 Both profiles are validated before live tab data is accepted. Partial failures retain saved content for the selected scenario, rather than mixing adult and CYP rows. The briefing and header identify the scenario. Attempts retain their loaded version; refreshing after starting requires a reset, including after going back to the briefing. The start button waits for the initial content check.
 

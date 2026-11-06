@@ -1,9 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {convertContent, loadContent, SHEET_NAMES} from '../src/content-loader.js';
+import {convertContent, loadContent, SHEET_NAMES, SHEET_TABS} from '../src/content-loader.js';
 import {resolveScenario, validateScenarioTab, thinglinkUrl} from '../src/scenario.js';
 
+const sheetNameFromUrl = url => Object.keys(SHEET_TABS).find(name => SHEET_TABS[name] === new URL(url).searchParams.get('sheet'));
 const initial = JSON.parse(await readFile(new URL('../public/content.json', import.meta.url), 'utf8'));
 const response = rows => ({ok:true, text:async()=>JSON.stringify({table:{
   cols:rows[0].map(label=>({label})), rows:rows.slice(1).map(row=>({c:row.map(v=>({v}))})),
@@ -27,7 +28,7 @@ test('CYP is the saved default and every selected content row belongs to that pr
 
 test('one live selector changes age, setting, guidance, feedback and AI URL together', async () => {
   const tabs=withScenario('adult');
-  const result=await loadContent(initial,{fetchImpl:async url=>response(tabs[new URL(url).searchParams.get('sheet')])});
+  const result=await loadContent(initial,{fetchImpl:async url=>response(tabs[sheetNameFromUrl(url)])});
   assert.equal(result.data.settings.patient_age,'46');
   assert.match(result.data.settings.patient_location,/Adult/);
   assert.equal(result.data.settings.thinglink_embed_url,'');
@@ -39,7 +40,7 @@ test('one live selector changes age, setting, guidance, feedback and AI URL toge
 test('partial outage uses fallback content for the selected adult profile, never CYP rows', async () => {
   const tabs=withScenario('adult');
   const result=await loadContent(initial,{fetchImpl:async url=>{
-    const name=new URL(url).searchParams.get('sheet');
+    const name=sheetNameFromUrl(url);
     return ['scenario_settings','scales'].includes(name)?{ok:false,status:503}:response(tabs[name]);
   }});
   assert.equal(result.data.settings.patient_age,'46');
@@ -50,7 +51,7 @@ test('partial outage uses fallback content for the selected adult profile, never
 test('invalid selector falls back visibly and missing profile content cannot erase a scenario', async () => {
   const tabs=withScenario('unknown');
   tabs.actions=tabs.actions.filter((row,i)=>i===0||row.at(-1)==='adult');
-  const result=await loadContent(initial,{fetchImpl:async url=>response(tabs[new URL(url).searchParams.get('sheet')])});
+  const result=await loadContent(initial,{fetchImpl:async url=>response(tabs[sheetNameFromUrl(url)])});
   assert.equal(result.data.settings.active_scenario,'cyp');
   assert.equal(result.data.settings.patient_age,'17');
   assert.ok(result.failures.some(row=>row.name==='settings'));
@@ -61,7 +62,7 @@ test('profile-specific edits survive selection, including an intentionally empty
   const tabs=structuredClone(initial);
   tabs.scenario_settings.find(row=>row[0]==='cyp'&&row[1]==='patient_name')[2]='Jamie Taylor';
   tabs.scenario_settings.find(row=>row[0]==='cyp'&&row[1]==='patient_portrait_url')[2]='';
-  const result=await loadContent(initial,{fetchImpl:async url=>response(tabs[new URL(url).searchParams.get('sheet')])});
+  const result=await loadContent(initial,{fetchImpl:async url=>response(tabs[sheetNameFromUrl(url)])});
   assert.equal(result.data.settings.patient_name,'Jamie Taylor');
   assert.equal(result.data.settings.patient_portrait_url,'');
 });

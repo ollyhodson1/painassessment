@@ -27,9 +27,9 @@ The adult link starts blank so changing the switch cannot accidentally open the 
 - **settings:** the live switch and shared settings, including answer lengths and the completion code.
 - **scenario_settings:** separate profile text, age, location, communication guidance, image URL and ThingLink URL for each scenario. Edit the **value** in column C for the relevant scenario/key. Empty image URLs use the bundled illustration. Empty ThingLink URLs do not borrow the other patient’s activity.
 - **tools:** shared pain-history frameworks and questions.
-- **dialogue, actions, sbar, reflection, scales:** rows tagged **adult** or **cyp** in the final **scenario** column. The website selects the active set. A tag of **all** can provide shared content; a scenario-specific row with the same identifier overrides it.
+- **scenario_dialogue, scenario_actions, scenario_sbar, scenario_reflection, scenario_scales:** rows tagged **adult** or **cyp** in the final **scenario** column. The website selects the active set. A tag of **all** can provide shared content; a scenario-specific row with the same identifier overrides it.
 
-The older unprefixed profile rows in settings are retained for compatibility; the selected rows in scenario_settings control the updated site. Changing the Sheet does not require a GitHub rebuild. Missing or malformed tabs use saved content for the selected scenario and are reported under Content details.
+The original dialogue/actions/sbar/reflection/scales tabs contain a CYP-only compatibility copy for the older published app. The updated app reads the scenario_ content-bank tabs instead. The older unprefixed profile rows in settings are retained for compatibility; the selected rows in scenario_settings control the updated site. Changing the Sheet does not require a GitHub rebuild. Missing or malformed tabs use saved content for the selected scenario and are reported under Content details.
 
 ## Clinical scope of these presets
 
